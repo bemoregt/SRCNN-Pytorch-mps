@@ -5,6 +5,8 @@ MPS GPGPU Version of SRCNN model
 
 CUDA/CPU version: https://github.com/Nhat-Thanh/SRCNN-Pytorch
 
+- cpu mode: 133 sec/epoch
+- mps mode : 5 sec/epoch
 
 ## Contents
 - [Train](#train)
