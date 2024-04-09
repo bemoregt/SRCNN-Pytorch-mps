@@ -63,7 +63,10 @@ valid_set.load_data()
 #  Train
 # -----------------------------------------------------------
 def main():
-    device = 'cuda' if torch.cuda.is_available() else 'cpu'
+    ##device = 'cuda' if torch.cuda.is_available() else 'cpu'
+    ## =======================
+    ## added by WonwooPark, 240409.
+    evice = 'mps' if torch.mps.is_available() else 'cpu'
     srcnn = SRCNN(architecture, device)
     srcnn.setup(optimizer=torch.optim.Adam(srcnn.model.parameters(), lr=2e-5),
                 loss=torch.nn.MSELoss(),
